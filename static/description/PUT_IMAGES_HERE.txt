@@ -1,0 +1,12 @@
+ضع صور الموديول في هذا الفولدر (static/description/) بالأسماء التالية بالظبط:
+
+1. icon.png          -> لوجو Scalebox (الشعار على خلفية داكنة)
+2. banner.png         -> صورة "Send Any Odoo Invoice in 1 Second"
+3. screenshot_1.png   -> لقطة فاتورة العميل (Send via WhatsApp بجانب Print)
+4. screenshot_2.png   -> لقطة أمر البيع (Sales Order)
+5. screenshot_3.png   -> لقطة عرض السعر (Quotation)
+6. screenshot_4.png   -> لقطة شاشة المشاركة في نقطة البيع (POS Share)
+
+بعد ما تحطهم، احذف هذا الملف (PUT_IMAGES_HERE.txt) — مش جزء من الموديول، هو بس تذكير بأسماء الملفات.
+
+ملاحظة: صفحة static/description/index.html جاهزة بالفعل وبتشاور على نفس الأسماء دي، فما ينفعش تغيّر الأسماء إلا لو عدّلت index.html معاها.

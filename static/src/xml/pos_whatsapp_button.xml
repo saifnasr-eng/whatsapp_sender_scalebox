@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <!-- Adds a "Send via WhatsApp" button right under the Print buttons
+         row of the POS Receipt Screen, without modifying the core file. -->
+    <t t-inherit="point_of_sale.ReceiptScreen" t-inherit-mode="extension">
+        <xpath expr="//button[@t-on-click='() => doFullPrint.call()']/parent::div" position="after">
+            <div class="d-flex gap-1">
+                <button class="button whatsapp-share btn btn-lg btn-secondary w-100 py-3"
+                        t-on-click="() => doWhatsappShare.call()">
+                    <i t-attf-class="fa {{doWhatsappShare.status === 'loading' ? 'fa-fw fa-spin fa-circle-o-notch' : 'fa-whatsapp'}} me-1"/>Send via WhatsApp
+                </button>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

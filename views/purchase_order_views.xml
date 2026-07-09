@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Adds a "Send via WhatsApp" button next to "Send by Email" on
+             the Request for Quotation / Purchase Order form
+             (purchase.order), without modifying the core view. Covers
+             both document types since they share the same model/view,
+             distinguished only by state. -->
+        <record id="purchase_order_form_whatsapp_share" model="ir.ui.view">
+            <field name="name">purchase.order.form.whatsapp.share</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//button[@name='action_rfq_send'])[1]" position="after">
+                    <widget name="whatsapp_share_widget" invisible="state == 'cancel'"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
