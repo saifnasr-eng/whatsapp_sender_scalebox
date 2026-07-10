@@ -66,6 +66,7 @@ Developed by Scalebox for Digital Services -- https://www.scale.scbox.pro
             'whatsapp_sender_scalebox/static/src/xml/whatsapp_share_widget.xml',
         ],
     },
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
